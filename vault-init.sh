@@ -7,6 +7,11 @@ echo "Usage: ./vault-init [UNIT_NAME]"
 echo
 echo Argument UNIT_NAME is optional, if not supplied, default value "vault/0"
 echo will be used.
+echo
+echo Requred tools:
+echo ' - vault'
+echo ' - jq'
+echo ' - juju'
 }
 
 strip_quotes () {
