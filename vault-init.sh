@@ -39,7 +39,6 @@ if [ "$RAW_ADDR" == "null" ]; then
 fi
 export VAULT_ADDR="http://$(strip_quotes $RAW_ADDR):8200"
 echo Found vault unit at $VAULT_ADDR
-exit
 
 # Initiate vault to get unsealing keys
 INIT_OUTPUT=$(vault operator init -key-shares=5 -key-threshold=3 -format=json)
