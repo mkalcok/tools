@@ -45,6 +45,7 @@ INIT_OUTPUT=$(vault operator init -key-shares=5 -key-threshold=3 -format=json)
 INIT_KEYS=$(echo $INIT_OUTPUT | jq -c .unseal_keys_b64[])
 ROOT_TOKEN=$(echo $INIT_OUTPUT | jq .root_token)
 export VAULT_TOKEN=$(strip_quotes $ROOT_TOKEN)
+echo Root token: $ROOT_TOKEN
 
 # Unseal vault with initial keys
 for KEY in $INIT_KEYS
