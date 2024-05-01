@@ -1,10 +1,9 @@
 #!/bin/bash
 
-# lxc list --project snapcraft -f json | jq '.[].name' | xargs -I {} lxc info --project snapcraft {}
 
 help()
 {
-	echo "Utility for mass deletion of LXC images in selected project."
+	echo "Utility for mass deletion of LXC containers in specific project."
 	echo
 	echo "Syntax: ./lxc.purge-project.sh [-h] <project>"
 	echo "Options:"
